@@ -2,7 +2,30 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Instructions to run the application locally:
+
+Setting up Saleor.[Ecommerce platform]
+
+1. Go to https://cloud.saleor.io/ . This is a Ecommerce platform and used as a store which contains products of different categories
+
+2. Signin and create organization and Then create Project.
+
+3. Loginto Organization then to project and go to dashboard.
+
+4. Add Collections and assign products.
+
+5. Under the availability make visible those channels[default channel].
+
+6. When you click the project you can identify the domain name.
+
+Clone the project and create .env file
+
+Add Following environmental variables to .env file
+
+    NEXT_PUBLIC_SALEOR_API_URL= DOMAIN NAME of your project which is in saleor cloud
+    NEXT_PUBLIC_STOREFRONT_URL= http://localhost:3000
+
+Start the local server using following.
 
 ```bash
 npm run dev
@@ -16,21 +39,39 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployed in Vercel. You can access to production through below URL
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://playa3ull-test.vercel.app/
+
+## Thought process and any architectural decisions
+
+This project integrates a **Saleor Cloud Store** (similar to Shopify) with a **Next.js** application to build a robust e-commerce platform.
+
+## **Features**
+
+- **Product Management**: Display products fetched from the Saleor cloud store.
+- **Categories**: Used categories as filters to organize and navigate products. Designed to be scalable for future enhancements.
+- **Product Details**: Detailed view of individual products with comprehensive information.
+- **Search Functionality**: Integrated a search bar to quickly find products.
+- **Cart Management**: Added functionality for adding and removing items in the cart.
+
+## **Component Design**
+
+- **Single Responsibility Principle**:  
+  Separated main components based on specific functionalities to achieve clear modularity.
+- **Reusable Components**:  
+  Developed common UI components to enhance reusability and reduce redundant code.
+- **Small, Meaningful Child Components**:  
+  Avoided creating large components by dividing functionality into smaller, focused child components.
+
+## **Integration with Saleor**
+
+- **GraphQL Queries**:  
+  Used GraphQL queries to fetch data (products, categories, etc.) from the Saleor cloud store for seamless integration.
+
+## **Development Best Practices**
+
+- Followed clean code principles to ensure scalability and maintainability.
+- Modularized code for better readability and flexibility for future improvements.
