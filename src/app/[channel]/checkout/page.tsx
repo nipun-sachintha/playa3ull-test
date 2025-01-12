@@ -2,15 +2,7 @@ export const metadata = {
   title: "Checkout",
 };
 
-export default function CheckoutPage({
-  searchParams,
-}: {
-  searchParams: { checkout?: string; order?: string };
-}) {
-  if (!searchParams.checkout && !searchParams.order) {
-    return null;
-  }
-
+export default function CheckoutPage() {
   return (
     <div className="min-h-dvh bg-white">
       <section className="mx-auto flex min-h-dvh max-w-7xl flex-col p-8">
