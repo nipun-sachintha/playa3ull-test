@@ -18,7 +18,7 @@ Setting up Saleor.[Ecommerce platform]
 
 6. When you click the project you can identify the domain name.
 
-Clone the project and create .env file
+Clone this github project and create .env file
 
 Add Following environmental variables to .env file
 
