@@ -39,7 +39,10 @@ export default async function Page({
 
   return (
     <section className="mx-auto max-w-7xl p-8">
-      <h1 className="mt-8 text-3xl font-bold text-neutral-900">
+      <h1
+        data-testid="shoppingCart"
+        className="mt-8 text-3xl font-bold text-neutral-900"
+      >
         Shopping Cart
       </h1>
       <form className="mt-12">
